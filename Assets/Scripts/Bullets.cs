@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class Bullets : MonoBehaviour {
+
+	public float Speed = 2.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -11,6 +13,9 @@ public class NewBehaviourScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		transform.position += transform.up * Speed;
+
+		Destroy (gameObject, 0.5f);
+
 	}
 }
