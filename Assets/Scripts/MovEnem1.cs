@@ -5,35 +5,51 @@ using UnityEngine;
 public class MovEnem1 : MonoBehaviour
 {
 	float velocidad = 3;
-	float tiempo = 0;
 	float dash = 0;
+	Rigidbody2D Rigi;
+	public bool cont = false;
+	
+	void Start()
+	{
+		Rigi = GetComponent<Rigidbody2D>();
+	}
 	
 	void Update () 
 	{
-		tiempo += Time.deltaTime;
 		dash += Time.deltaTime;
 		
-		if(tiempo < 3)
+		if(cont == false)
 		{
-			GetComponent<Rigidbody2D>().velocity = new Vector2(velocidad, GetComponent<Rigidbody2D>().velocity.y);
+			Rigi.velocity= new Vector2(-velocidad, Rigi.velocity.y);
 		}
-		if(tiempo > 3 && tiempo < 6)
+		else
 		{
-			GetComponent<Rigidbody2D>().velocity = new Vector2(-velocidad, GetComponent<Rigidbody2D>().velocity.y);
-		}
-		if(tiempo > 6)
-		{
-			tiempo = 0;
+			Rigi.velocity= new Vector2(velocidad, Rigi.velocity.y);
 		}
 		
 		if(dash > 4)
 		{
-			velocidad = 8;
+			velocidad = 18;
 		}
-		if(dash > 6)
+		if(dash > 4.5)
 		{
 			velocidad = 3;
 			dash = 0;
+		}
+	}
+	
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if(col.gameObject.tag == "pader")
+		{
+			if(cont == false)
+			{
+				cont = true;
+			}
+			else
+			{
+				cont = false;
+			}
 		}
 	}
 }
