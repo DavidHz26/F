@@ -143,7 +143,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e09f468f722e634c817b469e13e52e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bala: {fileID: 1719446960566590, guid: 5e4ebc76a1a0396489f9f5b4128fb820, type: 2}
+  tiempo_mov: 0
+  tiempo_juego1: 0
+  tiempo_juego2: 0
+  eco: {fileID: 1719446960566590, guid: 5e4ebc76a1a0396489f9f5b4128fb820, type: 2}
+  bala: {fileID: 1409040836750514, guid: dcf603ae8f9ecf64788dc11f6f30f0ad, type: 2}
 --- !u!50 &131164740
 Rigidbody2D:
   serializedVersion: 4
@@ -512,7 +516,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1561986912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.57, y: -2.43, z: 0}
+  m_LocalPosition: {x: -9.6, y: -2.43, z: 0}
   m_LocalScale: {x: 0.42774013, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -784,6 +788,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e09f468f722e634c817b469e13e52e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiempo_mov: 0
+  tiempo_juego1: 0
+  tiempo_juego2: 0
+  eco: {fileID: 0}
   bala: {fileID: 0}
 --- !u!50 &2010346528
 Rigidbody2D:
