@@ -74,14 +74,7 @@ public class MovEnem1 : MonoBehaviour
 	{
 		if(col.gameObject.tag == "pader")
 		{
-			if(cont == false)
-			{
-				cont = true;
-			}
-			else
-			{
-				cont = false;
-			}
+			cont = !cont;
 		}
 	}
 }
