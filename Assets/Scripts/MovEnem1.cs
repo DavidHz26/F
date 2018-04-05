@@ -6,15 +6,13 @@ public class MovEnem1 : MonoBehaviour
 {
 	float velocidad = 3;
 	float dash = 0;
-	Rigidbody2D Rigi;
-	public bool cont = false;
-	float vida = 10;
-	SpriteRenderer spr;
+	bool cont = false;
 	public Sprite Default;
 	public Sprite movD;
-	public Sprite movI;
 	public Sprite dashD;
-	public Sprite dashI;
+	Rigidbody2D Rigi;
+	SpriteRenderer spr;
+	float vida = 10;
 	
 	void Start()
 	{
@@ -22,14 +20,14 @@ public class MovEnem1 : MonoBehaviour
 		spr = GetComponent<SpriteRenderer> ();
 	}
 	
-	void Update () 
+	void Update ()
 	{
 		dash += Time.deltaTime;
 		
 		if(cont == false)
 		{
-			Rigi.velocity= new Vector2(-velocidad, Rigi.velocity.y);
-			spr.sprite = movD;
+			Rigi.velocity= new Vector2(-velocidad, 0);
+			transform.localRotation = Quaternion.Euler(0, 0, 0);
 			if(dash > 4)
 			{
 				velocidad = 18;
@@ -44,22 +42,22 @@ public class MovEnem1 : MonoBehaviour
 		}
 		else
 		{
-			Rigi.velocity= new Vector2(velocidad, Rigi.velocity.y);
-			spr.sprite = movI;
+			Rigi.velocity= new Vector2(velocidad, 0);
+			transform.localRotation = Quaternion.Euler(0, 180, 0);
 			if(dash > 4)
 			{
 				velocidad = 18;
-				spr.sprite = dashI;
+				spr.sprite = dashD;
 			}
 			if(dash > 4.5)
 			{
 				velocidad = 3;
-				spr.sprite = movI;
+				spr.sprite = movD;
 				dash = 0;
 			}
 		}
 		
-		if(Input.GetKeyDown(KeyCode.V))
+		/*if(Input.GetKeyDown(KeyCode.V))
 		{
 			vida--;
 		}
@@ -67,9 +65,10 @@ public class MovEnem1 : MonoBehaviour
 		if(vida <= 0)
 		{
 			Destroy(gameObject);
-		}
+		}*/
 	}
 	
+	//Cambio de direccion
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		if(col.gameObject.tag == "pader")
