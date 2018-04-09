@@ -35,7 +35,7 @@ public class patron_jefe : MonoBehaviour
 		if(dash <= 6)
 		{
 			timerD += Time.deltaTime;
-			
+			velocidad = 6;
 			if(timerD > 1.5)
 			{
 				Instantiate (fuegoD, transform.position, Quaternion.Euler (0, 0, 90));
@@ -51,10 +51,14 @@ public class patron_jefe : MonoBehaviour
 		}
 		if(dash > 10)
 		{
-			velocidad = 6;
+			velocidad = 0;
+		}
+		if(dash > 12)
+		{
+			velocidad = 2;
 			
 			timerD += Time.deltaTime;
-			if(timerD > 0.3)
+			if(timerD > 0.6)
 			{
 				Instantiate (granadin, transform.position, Quaternion.Euler (0, 0, coorgran));
 				timerD = 0;
