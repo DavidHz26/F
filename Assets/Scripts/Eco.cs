@@ -7,8 +7,6 @@ public class Eco : MonoBehaviour
 	float Speed = 0.3f;
 	float colcont = 0;
 	
-	static public bool fase_ataque = false;
-	
 	void Update () 
 	{
 		colcont += Time.deltaTime;
@@ -26,7 +24,7 @@ public class Eco : MonoBehaviour
 	{
 		if(col.gameObject.tag == "player")
 		{
-			fase_ataque = true;
+			patron_subjefe.ataque = true;
 		}
 	}
 }

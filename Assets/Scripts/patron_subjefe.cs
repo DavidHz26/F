@@ -7,7 +7,7 @@ public class patron_subjefe : MonoBehaviour
 	bool choque = true;
 	bool limit = true;
 	public bool fase_juego = true;
-	public bool ataque = false;
+	static public bool ataque = false;
 	
 	public float subebaja = 4;
 	float vel_mov = 5;
@@ -62,11 +62,6 @@ public class patron_subjefe : MonoBehaviour
 		if(fase_juego == false)
 		{
 			tiempo_juego += Time.deltaTime;
-			
-			if(Eco.fase_ataque == true)
-			{
-				tiempo_juego = 6;
-			}
 			
 			if(tiempo_juego <= 6)
 			{
