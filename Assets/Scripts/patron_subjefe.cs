@@ -30,7 +30,7 @@ public class patron_subjefe : MonoBehaviour
 	}
 	
 	void Update () 
-	{		
+	{
 		//Movimiento comun
 		if(contar < 3)
 		{
@@ -63,6 +63,11 @@ public class patron_subjefe : MonoBehaviour
 		{
 			tiempo_juego += Time.deltaTime;
 			
+			if(Eco.fase_ataque == true)
+			{
+				tiempo_juego = 6;
+			}
+			
 			if(tiempo_juego <= 6)
 			{
 				timer_eco += Time.deltaTime;
@@ -90,6 +95,7 @@ public class patron_subjefe : MonoBehaviour
 			vel_mov = 5;
 			transform.localRotation = Quaternion.Euler(0, 0, 0);
 			quat = 90;
+			
 		}
 		else
 		{

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class granadaM : MonoBehaviour 
 {
-	float Speed = 0.3f;
+	float Speed = 0.2f;
 	float colcont = 0;
 	
 	void Update () 
 	{
 		colcont += Time.deltaTime;
 		
-		if(colcont > 0.1)
+		if(colcont > 0.2)
 		{
 			gameObject.GetComponent<CircleCollider2D>().enabled = true;
 		}

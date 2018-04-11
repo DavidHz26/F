@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - pader
+  - psio
+  - player
   layers:
   - Default
   - TransparentFX

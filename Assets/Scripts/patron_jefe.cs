@@ -32,7 +32,7 @@ public class patron_jefe : MonoBehaviour
 	{
 		dash += Time.deltaTime;
 		
-		if(dash <= 6)
+		if(dash <= 8)
 		{
 			timerD += Time.deltaTime;
 			velocidad = 6;
@@ -45,26 +45,26 @@ public class patron_jefe : MonoBehaviour
 			}
 			
 		}
-		if(dash > 6)
+		if(dash > 8)
 		{
 			velocidad = 20;
 		}
-		if(dash > 10)
+		if(dash > 12)
 		{
 			velocidad = 0;
 		}
-		if(dash > 12)
+		if(dash > 14)
 		{
 			velocidad = 2;
 			
 			timerD += Time.deltaTime;
-			if(timerD > 0.6)
+			if(timerD > 0.8)
 			{
 				Instantiate (granadin, transform.position, Quaternion.Euler (0, 0, coorgran));
 				timerD = 0;
 			}
 		}
-		if(dash > 15)
+		if(dash > 17)
 		{
 			dash = 0;
 		}
