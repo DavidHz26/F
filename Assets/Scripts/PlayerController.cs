@@ -5,7 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float velWalk;
+	public float actualWalk;
+
 	public float VelRun;
+	public float actualRun;
+
 	public float Jump;
 
 	public bool ground;
@@ -24,84 +28,98 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		spr = GetComponent<SpriteRenderer> ();
-
+		actualWalk = velWalk;
+		actualRun = VelRun;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
-		if (idle == true && ground == true || idle == true && ground == false) {
-			spr.sprite = sJump;
-		} else {
-			spr.sprite = Default;
-		}
+		idle = true;
+		running = false;
+
+		float xAxis = Input.GetAxis ("Horizontal");
+		float yAxis = Input.GetAxis ("Vertical");
+
+		Vector3 movement = transform.TransformDirection (xAxis, yAxis, 0);
+
+		float leftxAxis = Input.GetAxis ("LeftJoystick_X");
+		float leftyAxis = Input.GetAxis ("LeftJoystick_Y");
+
+		transform.Translate (movement * velWalk);
+
+
+		///ANIMACIONES!!!!
 
 		//Movimiento Derecha
-		if (Input.GetKey (KeyCode.D)) {
+		if (xAxis >= 1) {
 			idle = false;
-			spr.sprite = Right;
 			spr.flipX = false;
-			transform.Translate (velWalk, 0.0f, 0.0f);
 		}
 
 		//Movimiento Izquierda
-		else if (Input.GetKey (KeyCode.A)) {
+		else if (xAxis <= -1) {
 			idle = false;
-			spr.sprite = Right;
 			spr.flipX = true;
-			transform.Translate (-velWalk, 0.0f, 0.0f);
-		} else {
-			idle = true;
 		}
 
 		//Movimiento Derecha con Salto
-		if (Input.GetKey (KeyCode.D) && ground == false) {
-			spr.sprite = sJump;
+		if (xAxis >= 1 && ground == false) {
 			idle = false;
 		}
 
 		//Movimiento Izquierda con Salto
-		if (Input.GetKey (KeyCode.A) && ground == false) {
-			spr.sprite = sJump;
+		if (xAxis <= -1 && ground == false) {
 			idle = false;
-		}
-			
-		//Correr Derecha
-		if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.LeftShift)) {
-			idle = false;
-			running = true;
-			transform.Translate (VelRun, 0.0f, 0.0f);
-		} 
-
-		//Correr Izquierda
-		else if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.LeftShift)) {
-			idle = false;
-			running = true;
-			transform.Translate (-VelRun, 0.0f, 0.0f);
-		} else {
-			running = false;
 		}
 
 		//Saltar
-		if (Input.GetKey (KeyCode.W) && ground == true) {
-			transform.Translate (0.0f, Jump, 0.0f);
+		if (yAxis >= 1 && ground == true) {
 			idle = false;
 			ground = false;
+			velWalk = Jump;
+		} else {
+			velWalk = actualWalk;
+		}
+
+		if (idle == false) {
+			spr.sprite = Right;
+		}
+
+		if (ground == false) {
 			spr.sprite = sJump;
 		}
-			
+
+		if (running == true) {
+			spr.sprite = Run;
+		}
+
+		//------------------------------------------------------------------
+
+		//Correr Derecha
+		if (xAxis >= 1 && Input.GetButton ("A")) {
+			idle = false;
+			running = true;
+			velWalk = VelRun;
+		}
+
+		//Correr Izquierda
+		else if (xAxis <= -1 && Input.GetButton ("A")) {
+			idle = false;
+			running = true;
+			velWalk = VelRun;
+		} else {
+			velWalk = actualWalk;
+		}
+
 		//Mover la direccion de disparo
-		if (Input.GetKey (KeyCode.UpArrow) && ground == true) {
+		if (leftyAxis <= -1 && ground == true) {
 			idle = false;
-			spr.sprite = Up;
-		} else if (Input.GetKey (KeyCode.UpArrow) && ground == false) {
+		} else if (leftyAxis <= -1 && ground == false) {
 			idle = false;
-			spr.sprite = sJump;
-		} else if (Input.GetKey (KeyCode.DownArrow) && ground == true) {
+		} else if (leftyAxis >= 1 && ground == true) {
 			idle = false;
-			spr.sprite = Down;
-		} else if (Input.GetKey (KeyCode.DownArrow) && ground == false) {
-			spr.sprite = sJump;
+		} else if (leftyAxis >= 1 && ground == false) {
 			idle = false;
 		}
 
@@ -114,15 +132,15 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 
-	
-		
+
+
 	}
 
 	void OnCollisionEnter2D (Collision2D _col){
 
 		//Controlador del salto
 		if(_col.gameObject.CompareTag("Suelo")){
-			
+
 			ground = true;
 
 			if (spr.sprite == sJump && running == false) {
