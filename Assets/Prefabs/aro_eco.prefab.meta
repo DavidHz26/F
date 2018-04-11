@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/suelo.prefab.meta
+guid: f64adf895d3171d49a385b60ff589917
+timeCreated: 1520830226
+=======
+guid: 5e4ebc76a1a0396489f9f5b4128fb820
+timeCreated: 1521641948
+>>>>>>> enemigos:Assets/Prefabs/aro_eco.prefab.meta
+licenseType: Free
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
