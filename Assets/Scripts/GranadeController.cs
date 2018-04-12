@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GranadeController : MonoBehaviour {
-
+	
+	
 	public GameObject pGranade;
 	private float Direction;
 
@@ -40,8 +41,12 @@ public class GranadeController : MonoBehaviour {
 			transform.localPosition = new Vector3 (-2.07f, 2.39f, 0.0f);
 			Direction = 45;
 		}
+		
+		if(L2 > 1){
+			L2 = 1;	
+		}
 
-		if (L2 >= 1 && Timer <= LimitTimer && Ammo >= 1) {
+		if (L2 == 1 && Timer <= LimitTimer && Ammo >= 1) {
 			Instantiate (pGranade, transform.position, Quaternion.Euler (0, 0, Direction));
 			Ammo -= 1;
 		}
