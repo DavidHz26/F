@@ -71,7 +71,7 @@ public class MovEnem1 : MonoBehaviour
 	//Cambio de direccion
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if(col.gameObject.tag == "pader")
+		if(col.gameObject.tag == "pader" || col.gameObject.tag == "Palyer")
 		{
 			cont = !cont;
 		}
