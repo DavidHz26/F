@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Suelo
+  - pader
+  - enemigote
+  - balin
+  - balon
   layers:
   - Default
   - TransparentFX

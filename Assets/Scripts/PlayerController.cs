@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Inche David, me traicionaste
+
 public class PlayerController : MonoBehaviour {
 
 	public float velWalk;
@@ -15,6 +17,8 @@ public class PlayerController : MonoBehaviour {
 	public bool ground;
 	public bool running;
 	public bool idle;
+	
+	public float vida = 3;
 
 	SpriteRenderer spr;
 
@@ -131,6 +135,12 @@ public class PlayerController : MonoBehaviour {
 				spr.sprite = Run;
 			}
 		}
+		
+		//Morir
+		if(vida <= 0)
+		{
+			Destroy(gameObject);
+		}
 
 
 
@@ -149,7 +159,11 @@ public class PlayerController : MonoBehaviour {
 			else if (spr.sprite == sJump && running == true) {
 				spr.sprite = Run;
 			}
-
+		}
+		
+		if(_col.gameObject.tag == "enemigote" || _col.gameObject.tag == "balin" || _col.gameObject.tag == "balon")
+		{
+			vida--;
 		}
 	}
 }

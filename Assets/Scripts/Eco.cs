@@ -22,9 +22,9 @@ public class Eco : MonoBehaviour
 	
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if(col.gameObject.tag == "player")
+		/*(if(col.gameObject.tag == "player")
 		{
 			patron_subjefe.ataque = true;
-		}
+		}*/
 	}
 }

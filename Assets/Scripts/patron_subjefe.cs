@@ -7,7 +7,7 @@ public class patron_subjefe : MonoBehaviour
 	bool choque = true;
 	bool limit = true;
 	public bool fase_juego = true;
-	static public bool ataque = false;
+	public bool ataque = false;
 	
 	public float subebaja = 4;
 	float vel_mov = 5;
@@ -111,5 +111,7 @@ public class patron_subjefe : MonoBehaviour
 				contar++;
 			}
 		}
+		
+		
 	}
 }
