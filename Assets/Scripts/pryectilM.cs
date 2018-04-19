@@ -11,7 +11,7 @@ public class pryectilM : MonoBehaviour
 	{
 		colcont += Time.deltaTime;
 		
-		if(colcont > 0.1)
+		if(colcont > 0.2)
 		{
 			gameObject.GetComponent<CircleCollider2D>().enabled = true;
 		}

@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour {
 	public Sprite Down;
 	public Sprite sJump;
 	public Sprite Run;
+	
+	public GameObject SecondCamera;
 
 	// Use this for initialization
 	void Start () {
@@ -139,7 +141,9 @@ public class PlayerController : MonoBehaviour {
 		//Morir
 		if(vida <= 0)
 		{
-			Destroy(gameObject);
+			SecondCamera.SetActive(true);
+			gameObject.SetActive(false);
+			Time.timeScale = 0.0f;
 		}
 
 

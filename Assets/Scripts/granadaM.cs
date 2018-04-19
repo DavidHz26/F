@@ -11,7 +11,7 @@ public class granadaM : MonoBehaviour
 	{
 		colcont += Time.deltaTime;
 		
-		if(colcont > 0.2)
+		if(colcont > 0.3)
 		{
 			gameObject.GetComponent<CircleCollider2D>().enabled = true;
 		}
