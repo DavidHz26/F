@@ -9,6 +9,8 @@ TagManager:
   - enemigote
   - balin
   - balon
+  - Banana
+  - Uvas
   layers:
   - Default
   - TransparentFX

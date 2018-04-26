@@ -3,27 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapons : MonoBehaviour {
+	
+	public int numWeapon = 1;
 
 	public int Direction;
 	public float Speed;
 	public int Ammo;
 
 	public GameObject Bullet;
-	GameObject actualBullet;
+	public GameObject Bullet1;
+	public GameObject Bullet2;
 
 	public float Timer;
 	public float LimitTimer;
 
 	SpriteRenderer spr;
 
-	public Sprite Weapon;
-	Sprite actWeapon;
+	public Sprite Weapon1;
+	public Sprite Weapon2;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		spr = GetComponent<SpriteRenderer> ();
-		actualBullet = Bullet;
-		actWeapon = Weapon;
 		Direction = -90;
 	}
 	
@@ -43,15 +45,29 @@ public class Weapons : MonoBehaviour {
 		}
 
 		Timer -= Time.deltaTime;
-
-		spr.sprite = Weapon;
-
-		if (Input.GetButton("L1")){
-			Weapon = actWeapon;
-			Bullet = actualBullet;
+		
+		if(numWeapon == 1)
+		{
+			spr.sprite = Weapon1;
+			Bullet = Bullet1;
 			Timer = 0.2f;
 			LimitTimer = 0.2f;
 			Ammo = 1000;
+			numWeapon = 0;
+		}
+		else if(numWeapon == 2)
+		{
+			spr.sprite = Weapon2;
+			Bullet = Bullet2;
+			Timer = 0.5f;
+			LimitTimer = 0.5f;
+			Ammo = 15;
+			numWeapon = 0;
+		}
+
+		if (Input.GetButton("L1"))
+		{
+			numWeapon = 1;
 		}
 
 		//Arma a la Izquierda
@@ -96,17 +112,6 @@ public class Weapons : MonoBehaviour {
 				Timer = LimitTimer;
 				Ammo -= 1;
 			}
-		}
-			
-		//Arriba
-		if (Input.GetKey (KeyCode.UpArrow)) {
-			transform.localPosition = new Vector3 (0.2f, 3.7f, 0.0f);
-		}
-
-		//Abajo
-		if (Input.GetKey (KeyCode.DownArrow)) {
-			transform.localPosition = new Vector3 (0.2f, -3.0f, 0.0f);
-		
 		}
 			
 	}

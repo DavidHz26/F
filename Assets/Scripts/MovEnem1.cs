@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MovEnem1 : MonoBehaviour
 {
-	float velocidad = 3;
+	float velocidad = -3;
+	float cambio = -1;
+	int pos;
 	float dash = 0;
 	bool cont = false;
 	public Sprite Default;
@@ -24,37 +26,26 @@ public class MovEnem1 : MonoBehaviour
 	{
 		dash += Time.deltaTime;
 		
+		Rigi.velocity= new Vector2(velocidad, 0);
+		if(dash > 3)
+		{
+			velocidad = 18 * cambio;
+			spr.sprite = dashD;
+		}
+		if(dash > 3.5)
+		{
+			velocidad = 3 * cambio;
+			spr.sprite = movD;
+			dash = 0;
+		}
+		
 		if(cont == false)
 		{
-			Rigi.velocity= new Vector2(-velocidad, 0);
 			transform.localRotation = Quaternion.Euler(0, 0, 0);
-			if(dash > 4)
-			{
-				velocidad = 18;
-				spr.sprite = dashD;
-			}
-			if(dash > 4.5)
-			{
-				velocidad = 3;
-				spr.sprite = movD;
-				dash = 0;
-			}
 		}
 		else
 		{
-			Rigi.velocity= new Vector2(velocidad, 0);
 			transform.localRotation = Quaternion.Euler(0, 180, 0);
-			if(dash > 4)
-			{
-				velocidad = 18;
-				spr.sprite = dashD;
-			}
-			if(dash > 4.5)
-			{
-				velocidad = 3;
-				spr.sprite = movD;
-				dash = 0;
-			}
 		}
 		
 		/*if(Input.GetKeyDown(KeyCode.V))
@@ -74,6 +65,8 @@ public class MovEnem1 : MonoBehaviour
 		if(col.gameObject.tag == "pader" || col.gameObject.tag == "Player")
 		{
 			cont = !cont;
+			velocidad = velocidad * -1;
+			cambio = cambio * -1;
 		}
 	}
 }

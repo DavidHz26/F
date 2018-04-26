@@ -74,4 +74,16 @@ public class MovEnem2 : MonoBehaviour
 			Destroy(gameObject);
 		}
 	}
+	
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if(col.gameObject.tag == "Banana")
+		{
+			vida-=1;
+		}
+		if(col.gameObject.tag == "Uvas")
+		{
+			vida-=3;
+		}
+	}
 }

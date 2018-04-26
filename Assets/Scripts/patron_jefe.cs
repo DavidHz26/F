@@ -5,7 +5,7 @@ using UnityEngine;
 public class patron_jefe : MonoBehaviour 
 {
 	int coorgran = 45;
-	float velocidad = 6;
+	float velocidad;
 	float dash = 0;
 	float timerD = 0;
 	bool coli = false;
@@ -35,7 +35,7 @@ public class patron_jefe : MonoBehaviour
 		if(dash <= 8)
 		{
 			timerD += Time.deltaTime;
-			velocidad = 6;
+			velocidad = 12;
 			if(timerD > 1.5)
 			{
 				Instantiate (fuegoD, transform.position, Quaternion.Euler (0, 0, 90));
@@ -47,7 +47,7 @@ public class patron_jefe : MonoBehaviour
 		}
 		if(dash > 8)
 		{
-			velocidad = 20;
+			velocidad = 40;
 		}
 		if(dash > 12)
 		{
@@ -55,7 +55,7 @@ public class patron_jefe : MonoBehaviour
 		}
 		if(dash > 14)
 		{
-			velocidad = 2;
+			velocidad = 4;
 			
 			timerD += Time.deltaTime;
 			if(timerD > 0.8)
