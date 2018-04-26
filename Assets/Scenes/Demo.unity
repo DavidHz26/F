@@ -1508,7 +1508,7 @@ Prefab:
         type: 2}
       propertyPath: Weapon1
       value: 
-      objectReference: {fileID: 21300000, guid: 0565a497301478e438087f5875e0365a,
+      objectReference: {fileID: 21300000, guid: ab9e7475d3ef2f8459b8e9cdeb3b5848,
         type: 3}
     - target: {fileID: 114427497309602018, guid: d37f9cfe70a354b4ebbb83b12fe52e7b,
         type: 2}
