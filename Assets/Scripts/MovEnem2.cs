@@ -65,10 +65,6 @@ public class MovEnem2 : MonoBehaviour
 		}
 		
 		//Vida y muerte del murcielago
-		if(Input.GetKeyDown(KeyCode.M))
-		{
-			vida--;
-		}
 		if(vida <= 0)
 		{
 			Destroy(gameObject);

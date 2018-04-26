@@ -48,15 +48,11 @@ public class MovEnem1 : MonoBehaviour
 			transform.localRotation = Quaternion.Euler(0, 180, 0);
 		}
 		
-		/*if(Input.GetKeyDown(KeyCode.V))
-		{
-			vida--;
-		}
-		
+		//Vida y muerte del vampiro
 		if(vida <= 0)
 		{
 			Destroy(gameObject);
-		}*/
+		}
 	}
 	
 	//Cambio de direccion
@@ -67,6 +63,15 @@ public class MovEnem1 : MonoBehaviour
 			cont = !cont;
 			velocidad = velocidad * -1;
 			cambio = cambio * -1;
+		}
+		
+		if(col.gameObject.tag == "Banana")
+		{
+			vida-=1;
+		}
+		if(col.gameObject.tag == "Uvas")
+		{
+			vida-=3;
 		}
 	}
 }
