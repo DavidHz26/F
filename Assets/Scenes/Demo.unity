@@ -1516,6 +1516,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 6bdfe9070b4a648429b36a57a44c1ad2,
         type: 3}
+    - target: {fileID: 114699312771784014, guid: d37f9cfe70a354b4ebbb83b12fe52e7b,
+        type: 2}
+      propertyPath: bandera
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d37f9cfe70a354b4ebbb83b12fe52e7b, type: 2}
   m_IsPrefabParent: 0

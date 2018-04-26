@@ -16,9 +16,12 @@ public class GranadeController : MonoBehaviour {
 	SpriteRenderer spr;
 	public Sprite nGranade;
 
+	public bool bandera;
+
 	// Use this for initialization
 	void Start () {
 		spr = GetComponent<SpriteRenderer> ();
+		bandera = true;
 	}
 
 	// Update is called once per frame
@@ -28,8 +31,7 @@ public class GranadeController : MonoBehaviour {
 
 		float xAxis = Input.GetAxis ("Horizontal");
 		float L2 = Input.GetAxis ("L2");
-		float R1 = Input.GetAxis ("R1");
-	
+		print (L2);
 		//Vector3 movement = transform.TransformDirection (xAxis, 0, 0);
 
 		if (xAxis >= 1) {
@@ -42,25 +44,22 @@ public class GranadeController : MonoBehaviour {
 			Direction = 45;
 		}
 		
-		if(L2 > 1){
+		if(L2 >= 0.9f){
 			L2 = 1;	
 		}
 
-		if (L2 == 1 && Timer <= LimitTimer && Ammo >= 1) {
+		if (L2 == 1 && Timer >= LimitTimer && Ammo >= 1 && bandera == true) {
+			bandera = false;
 			Instantiate (pGranade, transform.position, Quaternion.Euler (0, 0, Direction));
 			Ammo -= 1;
 		}
-
-		if(Input.GetButton("R1")){
-			print ("R1");
-			spr.sprite = nGranade;
-			Timer = 1;
-			LimitTimer = 1;
-			Ammo = 10;
+		if(L2 < 0.8f)
+		{
+			L2 = 0;
+			bandera = true;
 		}
-
-
-		if (Timer > LimitTimer) {
+			
+		if (Timer >= LimitTimer+1) {
 			Timer = 0.0f;
 		}
 	}
