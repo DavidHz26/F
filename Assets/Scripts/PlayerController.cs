@@ -169,5 +169,21 @@ public class PlayerController : MonoBehaviour {
 		{
 			vida--;
 		}
+		
+		if(_col.gameObject.tag == "vida+")
+		{
+			if(vida < 3)
+			{
+				vida++;
+			}
+		}
+		
+		if(_col.gameObject.tag == "vida++")
+		{
+			if(vida < 3)
+			{
+				vida = 3;
+			}
+		}
 	}
 }

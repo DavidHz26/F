@@ -11,6 +11,8 @@ TagManager:
   - balon
   - Banana
   - Uvas
+  - vida+
+  - vida++
   layers:
   - Default
   - TransparentFX
