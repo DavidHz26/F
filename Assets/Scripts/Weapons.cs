@@ -13,6 +13,7 @@ public class Weapons : MonoBehaviour {
 	public GameObject Bullet;
 	public GameObject Bullet1;
 	public GameObject Bullet2;
+	public GameObject Bullet3;
 
 	public float Timer;
 	public float LimitTimer;
@@ -21,6 +22,7 @@ public class Weapons : MonoBehaviour {
 
 	public Sprite Weapon1;
 	public Sprite Weapon2;
+	public Sprite Weapon3;
 
 	// Use this for initialization
 	void Start () 
@@ -62,6 +64,15 @@ public class Weapons : MonoBehaviour {
 			Timer = 0.5f;
 			LimitTimer = 0.5f;
 			Ammo = 15;
+			numWeapon = 0;
+		}
+		else if(numWeapon == 3)
+		{
+			spr.sprite = Weapon3;
+			Bullet = Bullet3;
+			Timer = 0.1f;
+			LimitTimer = 0.1f;
+			Ammo = 60;
 			numWeapon = 0;
 		}
 

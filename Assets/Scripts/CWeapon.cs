@@ -11,7 +11,7 @@ public class CWeapon : MonoBehaviour {
 	{
 		if(_col.gameObject.CompareTag("Player"))
 		{
-			cWeapon.GetComponent<Weapons> ().numWeapon = 2;
+			cWeapon.GetComponent<Weapons> ().numWeapon = _numWeapon;
 			Destroy (gameObject); 
 		}
 
