@@ -8,6 +8,7 @@ public class patron_jefe : MonoBehaviour
 	float velocidad;
 	float dash = 0;
 	float timerD = 0;
+	float vida = 450;
 	bool coli = false;
 	public GameObject fuegoD;
 	public GameObject fuegoI;
@@ -32,7 +33,7 @@ public class patron_jefe : MonoBehaviour
 	{
 		dash += Time.deltaTime;
 		
-		if(dash <= 8)
+		if(dash <= 8) //Movimiento principal
 		{
 			timerD += Time.deltaTime;
 			velocidad = 12;
@@ -45,15 +46,15 @@ public class patron_jefe : MonoBehaviour
 			}
 			
 		}
-		if(dash > 8)
+		if(dash > 8) //Super velocidad
 		{
 			velocidad = 40;
 		}
-		if(dash > 12)
+		if(dash > 12) //Descanso
 		{
 			velocidad = 0;
 		}
-		if(dash > 14)
+		if(dash > 14) //Movimiento y ataque lento
 		{
 			velocidad = 4;
 			
@@ -69,6 +70,7 @@ public class patron_jefe : MonoBehaviour
 			dash = 0;
 		}
 		
+		//Cambio de direccion
 		if(coli == false)
 		{
 			Rigi.velocity= new Vector2(-velocidad, 0);
@@ -81,14 +83,27 @@ public class patron_jefe : MonoBehaviour
 			transform.localRotation = Quaternion.Euler(0, 180, 0);
 			coorgran = -45;
 		}
+		
+		//Vida y muerte del subjefe
+		if(vida <= 0)
+		{
+			Destroy(gameObject);
+		}
 	}
 	
-	//Cambio de direccion
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		if(col.gameObject.tag == "pader" || col.gameObject.tag == "Player")
 		{
 			coli = !coli;
+		}
+		if(col.gameObject.tag == "Banana")
+		{
+			vida-=1;
+		}
+		if(col.gameObject.tag == "Uvas")
+		{
+			vida-=3;
 		}
 	}
 }

@@ -6,18 +6,17 @@ public class patron_subjefe : MonoBehaviour
 {
 	bool choque = true;
 	bool limit = true;
+	bool vivo = true;
 	public bool fase_juego = true;
 	static public bool ataque = false;
-	
-	public float subebaja = 4;
-	float vel_mov = 5;
-	public float tiempo_juego = 0;
 	float timer_eco = 0;
 	float timer_ataque = 0;
-	
-	public int contar = 0;
+	float vel_mov = 5;
+	float vida = 150;
+	public float subebaja = 4;
+	public float tiempo_juego = 0;
 	int quat = 90;
-	
+	public int contar = 0;
 	public GameObject eco;
 	GameObject localizador;
 	public GameObject bala;
@@ -32,6 +31,8 @@ public class patron_subjefe : MonoBehaviour
 	
 	void Update () 
 	{
+		if(vivo == true)
+		{
 		//Movimiento comun
 		if(contar < 3)
 		{
@@ -103,9 +104,21 @@ public class patron_subjefe : MonoBehaviour
 			transform.localRotation = Quaternion.Euler(0, 180, 0);
 			quat = -90;
 		}
+		}
+		
+		if (Input.GetKeyDown("space"))
+		{
+			vida-=50;
+		}
+		//Vida y muerte del subjefe
+		if(vida <= 0)
+		{
+			vivo = false;
+			gameObject.GetComponent<Rigidbody2D>().gravityScale = 2;
+			Destroy(gameObject, 3.0f);
+		}
 	}
 	
-	//Cambio de posicion
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		if(fase_juego == true)
@@ -116,7 +129,13 @@ public class patron_subjefe : MonoBehaviour
 				contar++;
 			}
 		}
-		
-		
+		if(col.gameObject.tag == "Banana")
+		{
+			vida-=1;
+		}
+		if(col.gameObject.tag == "Uvas")
+		{
+			vida-=3;
+		}
 	}
 }

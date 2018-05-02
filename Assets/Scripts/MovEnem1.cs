@@ -6,15 +6,15 @@ public class MovEnem1 : MonoBehaviour
 {
 	float velocidad = -3;
 	float cambio = -1;
-	int pos;
+	float vida = 3;
 	float dash = 0;
+	int pos;
 	bool cont = false;
 	public Sprite Default;
 	public Sprite movD;
 	public Sprite dashD;
 	Rigidbody2D Rigi;
 	SpriteRenderer spr;
-	float vida = 10;
 	
 	void Start()
 	{

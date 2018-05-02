@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GranadeController : MonoBehaviour {
-	
-	
+public class GranadeController : MonoBehaviour 
+{
 	public GameObject pGranade;
 	private float Direction;
 
@@ -18,22 +17,21 @@ public class GranadeController : MonoBehaviour {
 
 	public bool bandera;
 
-	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		spr = GetComponent<SpriteRenderer> ();
 		bandera = true;
 	}
 
-	// Update is called once per frame
-	void Update () {
-
+	void Update () 
+	{
 		Timer += Time.deltaTime;
 
 		float xAxis = Input.GetAxis ("Horizontal");
 		float L2 = Input.GetAxis ("L2");
-		print (L2);
+		//print (L2);
+		
 		//Vector3 movement = transform.TransformDirection (xAxis, 0, 0);
-
 		if (xAxis >= 1) {
 			transform.localPosition = new Vector3 (2.07f, 2.39f, 0.0f);
 			Direction = -45;
