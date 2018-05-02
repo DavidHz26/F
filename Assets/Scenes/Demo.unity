@@ -1568,7 +1568,7 @@ Prefab:
         type: 2}
       propertyPath: Weapon2
       value: 
-      objectReference: {fileID: 21300000, guid: 6bdfe9070b4a648429b36a57a44c1ad2,
+      objectReference: {fileID: 21300000, guid: 5edfb16cf271cc743b6cfe4f87960201,
         type: 3}
     - target: {fileID: 114699312771784014, guid: d37f9cfe70a354b4ebbb83b12fe52e7b,
         type: 2}
@@ -1747,11 +1747,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4456736137448648, guid: 32aa17cd8e4b10a44b3dec02549b008f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -25.29
+      value: -25.23
       objectReference: {fileID: 0}
     - target: {fileID: 4456736137448648, guid: 32aa17cd8e4b10a44b3dec02549b008f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.88
+      value: -2.74
       objectReference: {fileID: 0}
     - target: {fileID: 4456736137448648, guid: 32aa17cd8e4b10a44b3dec02549b008f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1782,6 +1782,34 @@ Prefab:
       propertyPath: cWeapon
       value: 
       objectReference: {fileID: 1854858824}
+    - target: {fileID: 212256163878151512, guid: 32aa17cd8e4b10a44b3dec02549b008f,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5edfb16cf271cc743b6cfe4f87960201,
+        type: 3}
+    - target: {fileID: 61732323971801424, guid: 32aa17cd8e4b10a44b3dec02549b008f,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61732323971801424, guid: 32aa17cd8e4b10a44b3dec02549b008f,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456736137448648, guid: 32aa17cd8e4b10a44b3dec02549b008f, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.2799378
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456736137448648, guid: 32aa17cd8e4b10a44b3dec02549b008f, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.27993774
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456736137448648, guid: 32aa17cd8e4b10a44b3dec02549b008f, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.27993774
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114926460709683214, guid: 32aa17cd8e4b10a44b3dec02549b008f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 32aa17cd8e4b10a44b3dec02549b008f, type: 2}
