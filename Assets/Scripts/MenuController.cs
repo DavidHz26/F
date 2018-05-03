@@ -6,15 +6,22 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour {
 
 	//Jugar
-	void Play(){
+	public void Play(){
 		SceneManager.LoadScene("Demo");
 	}
 	
-	void Credits(){
+	//Menu
+	public void Menu(){
+		SceneManager.LoadScene("Menu");
+	}
+	
+	//Creditos
+	public void Credits(){
 		SceneManager.LoadScene("Creditos");
 	}
 	
-	void Exit(){
-		Application.Quit;
+	//Salir
+	public void Exit(){
+		Application.Quit();
 	}
 }
