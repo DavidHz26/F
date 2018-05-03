@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour {
 	public Sprite Run;
 	
 	public GameObject SecondCamera;
+	public GameObject CanvasGO;
 
 	// Use this for initialization
 	void Start () {
@@ -142,6 +143,7 @@ public class PlayerController : MonoBehaviour {
 		if(vida <= 0)
 		{
 			SecondCamera.SetActive(true);
+			CanvasGO.SetActive(true);
 			gameObject.SetActive(false);
 			Time.timeScale = 0.0f;
 		}

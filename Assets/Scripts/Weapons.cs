@@ -61,9 +61,9 @@ public class Weapons : MonoBehaviour {
 		{
 			spr.sprite = Weapon2;
 			Bullet = Bullet2;
-			Timer = 0.5f;
-			LimitTimer = 0.5f;
-			Ammo = 15;
+			Timer = 0.8f;
+			LimitTimer = 0.8f;
+			Ammo = 7;
 			numWeapon = 0;
 		}
 		else if(numWeapon == 3)
