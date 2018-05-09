@@ -6,7 +6,7 @@ public class MovEnem1 : MonoBehaviour
 {
 	float velocidad = -3;
 	float cambio = -1;
-	float vida = 3;
+	float vida = 5;
 	float dash = 0;
 	int pos;
 	bool cont = false;
@@ -27,9 +27,13 @@ public class MovEnem1 : MonoBehaviour
 		dash += Time.deltaTime;
 		
 		Rigi.velocity= new Vector2(velocidad, 0);
+		if(dash >2.8)
+		{
+			velocidad = 0 * cambio;
+		}
 		if(dash > 3)
 		{
-			velocidad = 18 * cambio;
+			velocidad = 24 * cambio;
 			spr.sprite = dashD;
 		}
 		if(dash > 3.5)

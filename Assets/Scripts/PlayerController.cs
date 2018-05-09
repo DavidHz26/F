@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Inche David, me traicionaste
-
 public class PlayerController : MonoBehaviour {
 
 	public float velWalk;
@@ -18,7 +16,6 @@ public class PlayerController : MonoBehaviour {
 
 	SpriteRenderer spr;
 
-
 	public Sprite Default;
 	public Sprite Right;
 	public Sprite Up;
@@ -27,17 +24,18 @@ public class PlayerController : MonoBehaviour {
 	
 	public GameObject SecondCamera;
 	public GameObject CanvasGO;
+	public GameObject actSub;
+	public GameObject actJef;
 
-	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		spr = GetComponent<SpriteRenderer> ();
 	
 		actualWalk = velWalk;
 	}
 
-	// Update is called once per frame
-	void Update () {
-
+	void Update () 
+	{
 		idle = true;
 		
 		//Movimiento
@@ -50,9 +48,7 @@ public class PlayerController : MonoBehaviour {
 		
 		transform.Translate (movement * velWalk);
 
-
 		///ANIMACIONES!!!!
-
 
 		//Movimiento Derecha
 		if (xAxis >= 1) {
@@ -88,8 +84,6 @@ public class PlayerController : MonoBehaviour {
 			spr.sprite = sJump;
 			
 		}
-
-
 		else {
 			if(ground==true &&  idle == true){
 				spr.sprite = Default;
@@ -104,13 +98,10 @@ public class PlayerController : MonoBehaviour {
 			gameObject.SetActive(false);
 			Time.timeScale = 0.0f;
 		}
-
-
-
 	}
 
-	void OnCollisionEnter2D (Collision2D _col){
-
+	void OnCollisionEnter2D (Collision2D _col)
+	{
 		//Controlador del salto
 		if(_col.gameObject.CompareTag("Suelo")){
 
@@ -122,7 +113,6 @@ public class PlayerController : MonoBehaviour {
 		}
 		
 		//Controlador de vida
-		
 		if(_col.gameObject.tag == "enemigote" || _col.gameObject.tag == "balin" || _col.gameObject.tag == "balon")
 		{
 			vida--;
@@ -142,6 +132,19 @@ public class PlayerController : MonoBehaviour {
 			{
 				vida = 3;
 			}
+		}
+	}
+	
+	void OnTriggerEnter2D(Collider2D otro)
+	{
+		if(otro.gameObject.CompareTag("activa1"))
+		{
+			actSub.GetComponent<patron_subjefe>().enabled = true;
+		}
+		
+		if(otro.gameObject.CompareTag("activa2"))
+		{
+			actJef.GetComponent<patron_jefe>().enabled = true;
 		}
 	}
 }

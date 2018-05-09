@@ -33,10 +33,10 @@ public class patron_jefe : MonoBehaviour
 	{
 		dash += Time.deltaTime;
 		
-		if(dash <= 8) //Movimiento principal
+		if(dash <= 7.8) //Movimiento principal
 		{
 			timerD += Time.deltaTime;
-			velocidad = 12;
+			velocidad = 6;
 			if(timerD > 1.5)
 			{
 				Instantiate (fuegoD, transform.position, Quaternion.Euler (0, 0, 90));
@@ -46,9 +46,13 @@ public class patron_jefe : MonoBehaviour
 			}
 			
 		}
+		if(dash > 7.8)
+		{
+			velocidad = 0;
+		}
 		if(dash > 8) //Super velocidad
 		{
-			velocidad = 40;
+			velocidad = 24;
 		}
 		if(dash > 12) //Descanso
 		{
@@ -56,7 +60,7 @@ public class patron_jefe : MonoBehaviour
 		}
 		if(dash > 14) //Movimiento y ataque lento
 		{
-			velocidad = 4;
+			velocidad = 2;
 			
 			timerD += Time.deltaTime;
 			if(timerD > 0.8)

@@ -13,6 +13,8 @@ TagManager:
   - Uvas
   - vida+
   - vida++
+  - activa1
+  - activa2
   layers:
   - Default
   - TransparentFX

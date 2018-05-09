@@ -8,7 +8,7 @@ public class MovEnem2 : MonoBehaviour
 	float tiempo = 0;
 	float volando = 0;
 	float Timer = 0;
-	float vida = 5;
+	float vida = 3;
 	public GameObject bala;
 	GameObject balaActual;
 	SpriteRenderer spr;
