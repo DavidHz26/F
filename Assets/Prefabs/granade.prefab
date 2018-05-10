@@ -54,7 +54,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fbacc24caf36b04faa2dd3f4f151499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gSpeed: 0.3
+  gSpeed: 250
   sGranade: {fileID: 21300000, guid: 07eb5aca082d1244b8524504f81ce8ea, type: 3}
   sBoom: {fileID: 21300000, guid: 85e9afc56ba899b4c8ad939be075df38, type: 3}
 --- !u!212 &212970242888032090

@@ -15,12 +15,11 @@ public class GranadeController : MonoBehaviour
 	SpriteRenderer spr;
 	public Sprite nGranade;
 
-	public bool bandera;
+	public bool pressL2 = false;
 
 	void Start () 
 	{
 		spr = GetComponent<SpriteRenderer> ();
-		bandera = true;
 	}
 
 	void Update () 
@@ -42,19 +41,17 @@ public class GranadeController : MonoBehaviour
 			Direction = 45;
 		}
 		
-		if(L2 >= 0.9f){
-			L2 = 1;	
-		}
-
-		if (L2 == 1 && Timer >= LimitTimer && Ammo >= 1 && bandera == true) {
-			bandera = false;
+		if(L2 >= 0.5f && pressL2 == false && Ammo > 0){
+			pressL2 = true;
 			Instantiate (pGranade, transform.position, Quaternion.Euler (0, 0, Direction));
 			Ammo -= 1;
 		}
-		if(L2 < 0.8f)
+
+
+		if(L2 < 0.5f)
 		{
-			L2 = 0;
-			bandera = true;
+			pressL2 = false;
+			
 		}
 			
 		if (Timer >= LimitTimer+1) {

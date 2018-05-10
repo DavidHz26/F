@@ -33,10 +33,13 @@ public class Weapons : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+		
 
 		float leftxAxis = Input.GetAxis ("LeftJoystick_X");
 		float leftyAxis = Input.GetAxis ("LeftJoystick_Y");
 		float R2 = Input.GetAxis ("R2");
+		print(leftxAxis + "  -  " +leftyAxis );
 
 		Vector3 movement = transform.TransformDirection (leftxAxis, (-leftyAxis), 0);
 
@@ -80,6 +83,10 @@ public class Weapons : MonoBehaviour {
 		{
 			numWeapon = 1;
 		}
+		
+		if(leftxAxis == 0 && leftyAxis == 0){
+			Direction = -90;
+		}
 
 		//Arma a la Izquierda
 		if(leftxAxis >= 1) {
@@ -105,12 +112,12 @@ public class Weapons : MonoBehaviour {
 			Direction = 180;
 		}
 
-		if  (Input.GetKey (KeyCode.U)) {
+		if  (leftxAxis >= 0.8f && leftyAxis <= -0.4f) {
 			//transform.localPosition = new Vector3 (3.59f, 2.54f, 0.0f);
 			Direction = -45;
 		}
 
-		if (Input.GetKey (KeyCode.Y)) {
+		if  (leftxAxis <= -0.8f && leftyAxis <= -0.4f) {
 			//transform.localPosition = new Vector3 (-3.59f, 2.54f, 0.0f);
 			Direction = 45;
 		}
