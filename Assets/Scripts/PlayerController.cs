@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour {
 		float leftxAxis = Input.GetAxis ("LeftJoystick_X");
 		
 		transform.Translate (movement * velWalk);
+		
 
 		///ANIMACIONES!!!!
 
@@ -75,7 +76,12 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//------------------------------------------------------------------
-
+		
+		if(Input.GetButton ("Start")){
+			print("En pausa");
+			
+		}
+		
 		//Saltar
 		if (Input.GetButton ("A") && ground == true) {
 			idle = false;

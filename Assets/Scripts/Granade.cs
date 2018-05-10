@@ -17,7 +17,6 @@ public class Granade : MonoBehaviour {
 		rigi = GetComponent<Rigidbody2D> ();
 		spr = GetComponent<SpriteRenderer> ();
 
-
 		
 		rigi.AddForce(new Vector2(1.0f, 1.0f) * gSpeed);
 	}
