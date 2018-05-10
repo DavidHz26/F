@@ -16,7 +16,10 @@ public class Pausar : MonoBehaviour
 	
 	void Update ()
 	{
-		if(Input.GetKeyDown(KeyCode.P))
+		
+		
+		
+		if(Input.GetButton ("Start"))
 		{
 			menup.SetActive(true);
 			camara2.SetActive(true);

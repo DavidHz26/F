@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -22,8 +23,6 @@ public class PlayerController : MonoBehaviour {
 	public Sprite Down;
 	public Sprite sJump;
 	
-	public GameObject SecondCamera;
-	public GameObject CanvasGO;
 	public GameObject actSub;
 	public GameObject actJef;
 
@@ -77,10 +76,7 @@ public class PlayerController : MonoBehaviour {
 
 		//------------------------------------------------------------------
 		
-		if(Input.GetButton ("Start")){
-			print("En pausa");
-			
-		}
+	
 		
 		//Saltar
 		if (Input.GetButton ("A") && ground == true) {
@@ -99,10 +95,11 @@ public class PlayerController : MonoBehaviour {
 		//Morir
 		if(vida <= 0)
 		{
-			SecondCamera.SetActive(true);
-			CanvasGO.SetActive(true);
+			SceneManager.LoadScene("GameOver");
+	
 			gameObject.SetActive(false);
-			Time.timeScale = 0.0f;
+			//Time.timeScale = 0.0f;
+			
 		}
 	}
 
