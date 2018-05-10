@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: 5af2588bf028e39408ec145de03ef614
+timeCreated: 1524777615
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Bat_Big_Wing_2
+    21300002: Bat_Big_Wing
+    21300004: Bat_Big_Fluff
+    21300006: Bat_Big_Eye_1
+    21300008: Bat_Big_Head
+    21300010: Bat_Big_Ear_2
+    21300012: Bat_Big_Ear_1
+    21300014: Bat_Big_Eye_2
+    21300016: Bat_Big_Body
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 125
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bat_Big_Wing_2
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 811
+        width: 481
+        height: 193
+      alignment: 9
+      pivot: {x: 0.02410305, y: 0.49999967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Big_Wing
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 730
+        width: 438
+        height: 259
+      alignment: 9
+      pivot: {x: 0.025070574, y: 0.18056697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Big_Fluff
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 521
+        width: 211
+        height: 247
+      alignment: 9
+      pivot: {x: 0.7504816, y: 0.21892792}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Big_Eye_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 640
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Big_Head
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 479
+        width: 194
+        height: 208
+      alignment: 9
+      pivot: {x: 0.28085452, y: 0.57409316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Big_Ear_2
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 512
+        width: 100
+        height: 189
+      alignment: 9
+      pivot: {x: 0.38839996, y: 0.14571449}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Big_Ear_1
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 521
+        width: 134
+        height: 180
+      alignment: 9
+      pivot: {x: 0.25411576, y: 0.17819078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Big_Eye_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 583
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bat_Big_Body
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 257
+        width: 251
+        height: 183
+      alignment: 9
+      pivot: {x: 0.3285034, y: 0.5406556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

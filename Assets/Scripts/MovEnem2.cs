@@ -28,29 +28,17 @@ public class MovEnem2 : MonoBehaviour
 		Timer += Time.deltaTime;
 		volando += Time.deltaTime;
 		
-		//Animacion
-		if(volando < 0.5)
-		{
-			spr.sprite = Default;
-		}
-		if(volando > 0.5 && volando < 1)
-		{
-			spr.sprite = Vuelo;
-		}
-		if(volando > 1)
-		{
-			volando = 0;
-		}
-		
 		//Movimiento
 		if(tiempo < 3)
 		{
 			GetComponent<Rigidbody2D>().velocity = new Vector2(velocidad, GetComponent<Rigidbody2D>().velocity.y);
+			transform.localRotation = Quaternion.Euler(0, 0, 0);
 			
 		}
 		if(tiempo > 3 && tiempo < 6)
 		{
 			GetComponent<Rigidbody2D>().velocity = new Vector2(-velocidad, GetComponent<Rigidbody2D>().velocity.y);
+			transform.localRotation = Quaternion.Euler(0, 180, 0);
 		}
 		if(tiempo > 6)
 		{
