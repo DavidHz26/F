@@ -28,7 +28,8 @@ public class AnimController : MonoBehaviour {
 			//Movimiento Derecha
 		if (xAxis >= 1) {
 			idle = false;
-			transform.localScale = new Vector3(transform.localScale.x * 1, transform.localScale.y, transform.localScale.z);
+		
+			//transform.localScale = new Vector3(transform.localScale.x * 1, transform.localScale.y, transform.localScale.z);
 			anim.SetBool("walk", true);
 			
 		}
@@ -36,7 +37,8 @@ public class AnimController : MonoBehaviour {
 		//Movimiento Izquierda
 		else if (xAxis <= -1) {
 			idle=false;
-			transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+			
+			//transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
 			anim.SetBool("walk", true);
 		}
 		
@@ -76,16 +78,17 @@ public class AnimController : MonoBehaviour {
 			anim.SetBool("jump", false);
 		}
 		
-		if(_col.gameObject.CompareTag("enemigote")){
-			
-			anim.SetBool("damage", true);
-		}
-		
 		//Controlador de vida
 		if(_col.gameObject.tag == "enemigote" || _col.gameObject.tag == "balin" || _col.gameObject.tag == "balon")
 		{
 			anim.SetBool("damage", true);
 		}
 
+	}
+	
+	void OnTriggerEnter2D (Collider2D _col){
+		if(_col.gameObject.CompareTag("balin")){
+			anim.SetBool("damage", true);
+		}
 	}
 }
