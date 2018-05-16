@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour {
 			spr.flipX = false;
 			
 			//anim.SetBool("walk", true);
+			
 		}
 
 		//Movimiento Izquierda
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour {
 			spr.flipX = true;
 			
 			//anim.SetBool("walk", true);
+			
 		}
 
 		//Movimiento Derecha con Salto

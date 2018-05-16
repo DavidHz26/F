@@ -2425,7 +2425,7 @@ GameObject:
   - component: {fileID: 72257567}
   m_Layer: 0
   m_Name: TileSheet Big_5 (31)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2455,7 +2455,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.2894745, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2466,7 +2466,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 10.193756, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &72257568
 SpriteRenderer:
@@ -6049,7 +6049,7 @@ Transform:
   - {fileID: 739693414}
   - {fileID: 1723404622}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &168206221
 GameObject:
@@ -8455,7 +8455,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.4627762, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8466,7 +8466,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 46.65126, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &233113253
 SpriteRenderer:
@@ -11741,7 +11741,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4311761429051228, guid: 10fc91b646077564ba97c965e5030989, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 2
+=======
+      value: 0
+>>>>>>> 3b140379674ee7c6796b8060562182466f372b16
       objectReference: {fileID: 0}
     - target: {fileID: 137194036626405886, guid: 10fc91b646077564ba97c965e5030989,
         type: 2}
@@ -12080,12 +12084,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114850144893847982, guid: 10fc91b646077564ba97c965e5030989,
         type: 2}
+<<<<<<< HEAD
       propertyPath: vida
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4124385003716820, guid: 10fc91b646077564ba97c965e5030989, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -177.005
+=======
+      propertyPath: Jump
+      value: 3
+>>>>>>> 3b140379674ee7c6796b8060562182466f372b16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10fc91b646077564ba97c965e5030989, type: 2}
@@ -12878,7 +12887,7 @@ Transform:
   - {fileID: 1091214729}
   - {fileID: 1271420176}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &328831577
 GameObject:
@@ -17201,7 +17210,7 @@ Transform:
   - {fileID: 854548286}
   - {fileID: 1288368773}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &449989712
 GameObject:
@@ -18001,7 +18010,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4681757136692910, guid: bc69c8d10f757be4f84d16c35c35ad7a, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1610626010472772, guid: bc69c8d10f757be4f84d16c35c35ad7a, type: 2}
       propertyPath: m_TagString
@@ -18968,12 +18977,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 488483694}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.64, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.762663, y: 1.5655074, z: -46.04438}
+  m_LocalScale: {x: 4.604438, y: 4.604438, z: 4.604438}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 1406508769}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &489732705
 GameObject:
@@ -21202,7 +21211,7 @@ GameObject:
   - component: {fileID: 553318398}
   m_Layer: 0
   m_Name: TileSheet Big_18 (4)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21232,7 +21241,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.2516932, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -21243,7 +21252,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 5.063386, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &553318399
 SpriteRenderer:
@@ -21473,7 +21482,7 @@ GameObject:
   - component: {fileID: 563068679}
   m_Layer: 0
   m_Name: TileSheet Big_17 (44)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21503,7 +21512,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 1.2645514}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -21514,7 +21523,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 2.56, y: 5.0891027}
   m_EdgeRadius: 0
 --- !u!212 &563068680
 SpriteRenderer:
@@ -30128,7 +30137,7 @@ GameObject:
   - component: {fileID: 817043332}
   m_Layer: 0
   m_Name: TileSheet Big_5 (6)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30158,7 +30167,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.455101, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -30169,7 +30178,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 46.212265, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &817043333
 SpriteRenderer:
@@ -30439,7 +30448,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823263624
 GameObject:
@@ -31678,7 +31687,7 @@ GameObject:
   - component: {fileID: 854869904}
   m_Layer: 0
   m_Name: TileSheet Big_17 (26)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31708,7 +31717,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.90913105, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -31719,7 +31728,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 24.935911, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &854869905
 SpriteRenderer:
@@ -33919,7 +33928,7 @@ GameObject:
   - component: {fileID: 915373671}
   m_Layer: 0
   m_Name: TileSheet Big_17 (51)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33949,7 +33958,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 1.3498156}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -33960,7 +33969,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 2.56, y: 5.259631}
   m_EdgeRadius: 0
 --- !u!212 &915373672
 SpriteRenderer:
@@ -34216,7 +34225,7 @@ GameObject:
   - component: {fileID: 925722579}
   m_Layer: 0
   m_Name: TileSheet Big_17 (46)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34246,7 +34255,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 3.9165573}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -34257,7 +34266,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 2.56, y: 10.393114}
   m_EdgeRadius: 0
 --- !u!212 &925722580
 SpriteRenderer:
@@ -36008,7 +36017,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &976798074
 GameObject:
@@ -36344,7 +36353,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4041033210873758, guid: 4f5689fc24e363b48b67b9cebebce7e6, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 15
+=======
+      value: 1
+>>>>>>> 3b140379674ee7c6796b8060562182466f372b16
       objectReference: {fileID: 0}
     - target: {fileID: 114560512615564028, guid: 4f5689fc24e363b48b67b9cebebce7e6,
         type: 2}
@@ -36522,7 +36535,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4141127990544630, guid: 8a28d330f211fcb43bc5fda248326feb, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1138435635094272, guid: 8a28d330f211fcb43bc5fda248326feb, type: 2}
       propertyPath: m_TagString
@@ -37396,7 +37409,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.306037, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -37407,7 +37420,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 0.15532875, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &1001531381
 SpriteRenderer:
@@ -38054,7 +38067,7 @@ GameObject:
   - component: {fileID: 1019647672}
   m_Layer: 0
   m_Name: TileSheet Big_5 (27)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38084,7 +38097,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1.3152313, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -38095,7 +38108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 10.142059, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &1019647673
 SpriteRenderer:
@@ -40564,7 +40577,7 @@ GameObject:
   - component: {fileID: 1107923217}
   m_Layer: 0
   m_Name: TileSheet Big_17 (3)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40594,7 +40607,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.048301697, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -40605,7 +40618,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 7.5829926, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &1107923218
 SpriteRenderer:
@@ -43939,7 +43952,7 @@ GameObject:
   - component: {fileID: 1203284395}
   m_Layer: 0
   m_Name: TileSheet Big_17 (87)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43969,7 +43982,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -2.7453613, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -43980,7 +43993,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 64.208374, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &1203284396
 SpriteRenderer:
@@ -46149,7 +46162,7 @@ GameObject:
   - component: {fileID: 1250152068}
   m_Layer: 0
   m_Name: TileSheet Big_17 (17)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46179,7 +46192,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.1747017, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -46190,7 +46203,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 46.10218, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &1250152069
 SpriteRenderer:
@@ -47973,7 +47986,7 @@ GameObject:
   - component: {fileID: 1287251963}
   m_Layer: 0
   m_Name: TileSheet Big_17 (28)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48003,7 +48016,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.2649841, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -48014,7 +48027,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 10.02652, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &1287251964
 SpriteRenderer:
@@ -49005,7 +49018,7 @@ GameObject:
   - component: {fileID: 1312395334}
   m_Layer: 0
   m_Name: TileSheet Big_17 (49)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49035,7 +49048,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 3.930056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -49046,7 +49059,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 2.56, y: 10.420112}
   m_EdgeRadius: 0
 --- !u!212 &1312395335
 SpriteRenderer:
@@ -51491,7 +51504,7 @@ GameObject:
   - component: {fileID: 1353100024}
   m_Layer: 0
   m_Name: TileSheet Big_5 (49)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51521,7 +51534,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.2229614, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -51532,7 +51545,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 31.009949, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &1353100025
 SpriteRenderer:
@@ -52088,7 +52101,7 @@ RectTransform:
   - {fileID: 1518683979}
   - {fileID: 475610812}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -53445,6 +53458,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!4 &1406508769 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4311761429051228, guid: 10fc91b646077564ba97c965e5030989,
+    type: 2}
+  m_PrefabInternal: {fileID: 310611300}
 --- !u!1 &1408049824
 GameObject:
   m_ObjectHideFlags: 0
@@ -56329,7 +56347,7 @@ GameObject:
   - component: {fileID: 1461707371}
   m_Layer: 0
   m_Name: TileSheet Big_17 (7)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56359,7 +56377,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1.2293034, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -56370,7 +56388,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 20.26204, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &1461707372
 SpriteRenderer:
@@ -66072,7 +66090,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1697652061
 GameObject:
@@ -69302,7 +69320,7 @@ GameObject:
   - component: {fileID: 1775061511}
   m_Layer: 0
   m_Name: TileSheet Big_5 (28)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69332,7 +69350,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.3695526, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -69343,7 +69361,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 10.092194, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &1775061512
 SpriteRenderer:
@@ -71217,7 +71235,7 @@ GameObject:
   - component: {fileID: 1822032884}
   m_Layer: 0
   m_Name: TileSheet Big_16 (6)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71247,7 +71265,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1.311317, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -71258,7 +71276,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 5.1826334, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &1822032885
 SpriteRenderer:
@@ -74792,7 +74810,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859321778617326, guid: 277e716b39328dd498556675f3bc1e67, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1890834008631142, guid: 277e716b39328dd498556675f3bc1e67, type: 2}
       propertyPath: m_TagString
@@ -76137,7 +76155,7 @@ Transform:
   - {fileID: 1461230441}
   - {fileID: 2011422751}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1955336730
 GameObject:
@@ -83192,7 +83210,7 @@ GameObject:
   - component: {fileID: 2129780077}
   m_Layer: 0
   m_Name: TileSheet Big_5 (33)
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83222,7 +83240,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.2378998, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -83233,7 +83251,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 10.090607, y: 2.56}
   m_EdgeRadius: 0
 --- !u!212 &2129780078
 SpriteRenderer:
