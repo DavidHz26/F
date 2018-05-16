@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 		
-		if(vida == 6)
+		if(vida <= 6)
 		{
 			cora1.SetActive(false);
 			cora2.SetActive(false);
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour {
 			cora5.SetActive(true);
 			cora6.SetActive(true);
 		}
-		if(vida == 5)
+		if(vida <= 5)
 		{
 			cora1.SetActive(false);
 			cora2.SetActive(false);
@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour {
 			cora5.SetActive(true);
 			cora6.SetActive(false);
 		}
-		if(vida == 4)
+		if(vida <= 4)
 		{
 			cora1.SetActive(false);
 			cora2.SetActive(false);
@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour {
 			cora5.SetActive(true);
 			cora6.SetActive(false);
 		}
-		if(vida == 3)
+		if(vida <= 3)
 		{
 			cora1.SetActive(false);
 			cora2.SetActive(true);
@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour {
 			cora5.SetActive(false);
 			cora6.SetActive(false);
 		}
-		if(vida == 2)
+		if(vida <= 2)
 		{
 			cora1.SetActive(false);
 			cora2.SetActive(false);
@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour {
 			cora5.SetActive(false);
 			cora6.SetActive(false);
 		}
-		if(vida == 1)
+		if(vida <= 1)
 		{
 			cora1.SetActive(true);
 			cora2.SetActive(false);
@@ -186,14 +186,14 @@ public class PlayerController : MonoBehaviour {
 		if(_col.gameObject.tag == "enemigote" || _col.gameObject.tag == "balin" || _col.gameObject.tag == "balon")
 		{
 			//anim.SetBool("damage", true);
-			vida--;
+			vida = vida - 0.5f;
 		}
 		
 		if(_col.gameObject.tag == "vida+")
 		{
 			if(vida < 6)
 			{
-				vida+=2;
+				vida = vida + 2;
 			}
 		}
 		

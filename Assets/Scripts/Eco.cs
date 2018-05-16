@@ -17,7 +17,7 @@ public class Eco : MonoBehaviour
 		}
 		
 		transform.position += transform.up * Speed;
-		Destroy (gameObject, 1.0f);
+		Destroy (gameObject, 1.3f);
 	}
 	
 	void OnCollisionEnter2D(Collision2D col)
@@ -25,6 +25,7 @@ public class Eco : MonoBehaviour
 		if(col.gameObject.tag == "Player")
 		{
 			patron_subjefe.ataque = true;
+			Destroy(gameObject);
 		}
 		
 		if(col.gameObject.tag == "pader")

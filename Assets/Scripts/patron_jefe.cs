@@ -20,8 +20,11 @@ public class patron_jefe : MonoBehaviour
 	GameObject Mgranad;
 	Rigidbody2D Rigi;
 	
+	Animator anim;
+	
 	void Start () 
 	{
+		anim = GetComponent<Animator> ();
 		Rigi = GetComponent<Rigidbody2D>();
 		Fderecha = fuegoD;
 		FIzquierda = fuegoI;
