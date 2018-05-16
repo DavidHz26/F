@@ -26,12 +26,12 @@ public class PlayerController : MonoBehaviour {
 	public GameObject actSub;
 	public GameObject actJef;
 	
-	Animator anim;
+	//Animator anim;
 
 	void Start () 
 	{
 		spr = GetComponent<SpriteRenderer> ();
-		anim = GetComponent<Animator> ();
+		//anim = GetComponent<Animator> ();
 	
 		actualWalk = velWalk;
 	}
@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour {
 			spr.sprite = Right;
 			spr.flipX = false;
 			
-			anim.SetBool("walk", true);
+			//anim.SetBool("walk", true);
 		}
 
 		//Movimiento Izquierda
@@ -68,21 +68,21 @@ public class PlayerController : MonoBehaviour {
 			spr.sprite = Right;
 			spr.flipX = true;
 			
-			anim.SetBool("walk", true);
+			//anim.SetBool("walk", true);
 		}
 
 		//Movimiento Derecha con Salto
 		if (xAxis >= 1 && ground == false) {
 			idle = false;
 			
-			anim.SetBool("jump", true);
+			//anim.SetBool("jump", true);
 		}
 
 		//Movimiento Izquierda con Salto
 		if (xAxis <= -1 && ground == false) {
 			idle = false;
 			
-			anim.SetBool("jump", true);
+			//anim.SetBool("jump", true);
 		}
 
 		//------------------------------------------------------------------
@@ -96,21 +96,21 @@ public class PlayerController : MonoBehaviour {
 			transform.Translate(Vector3.up * Jump);
 			spr.sprite = sJump;
 			
-			anim.SetBool("jump", true);
+			//anim.SetBool("jump", true);
 			
 		}
 		else {
 			if(ground==true &&  idle == true){
 				spr.sprite = Default;
 				
-				anim.SetBool("walk", false);
+				//anim.SetBool("walk", false);
 			}
 		}
 		
 		//Morir
 		if(vida <= 0)
 		{
-			anim.SetBool("death", true);
+			//anim.SetBool("death", true);
 			SceneManager.LoadScene("GameOver");
 	
 			//gameObject.SetActive(false);
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour {
 		//Controlador de vida
 		if(_col.gameObject.tag == "enemigote" || _col.gameObject.tag == "balin" || _col.gameObject.tag == "balon")
 		{
-			anim.SetBool("damage", true);
+			//anim.SetBool("damage", true);
 			vida--;
 		}
 		
