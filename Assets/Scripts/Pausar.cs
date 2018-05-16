@@ -16,9 +16,6 @@ public class Pausar : MonoBehaviour
 	
 	void Update ()
 	{
-		
-		
-		
 		if(Input.GetButton ("Start"))
 		{
 			menup.SetActive(true);

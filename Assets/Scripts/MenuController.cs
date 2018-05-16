@@ -7,7 +7,7 @@ public class MenuController : MonoBehaviour {
 
 	//Jugar
 	public void Play(){
-		SceneManager.LoadScene("Demo");
+		SceneManager.LoadScene("Level");
 	}
 	
 	//Menu

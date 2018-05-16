@@ -7,32 +7,30 @@ public class PlayerController : MonoBehaviour {
 
 	public float velWalk;
 	public float actualWalk;
-
 	public float Jump;
-
+	public float vida = 6;
 	public bool ground;
 	public bool idle;
-	
-	public float vida = 3;
-
 	SpriteRenderer spr;
-
 	public Sprite Default;
 	public Sprite Right;
 	public Sprite Up;
 	public Sprite Down;
 	public Sprite sJump;
-	
 	public GameObject actSub;
 	public GameObject actJef;
+	public GameObject cora1;
+	public GameObject cora2;
+	public GameObject cora3;
+	public GameObject cora4;
+	public GameObject cora5;
+	public GameObject cora6;
 	
 	//Animator anim;
-
 	void Start () 
 	{
 		spr = GetComponent<SpriteRenderer> ();
 		//anim = GetComponent<Animator> ();
-	
 		actualWalk = velWalk;
 	}
 
@@ -41,7 +39,6 @@ public class PlayerController : MonoBehaviour {
 		idle = true;
 		
 		//Movimiento
-		
 		float xAxis = Input.GetAxis ("Horizontal");
 		
 		Vector3 movement = transform.TransformDirection (xAxis, 0, 0);
@@ -107,6 +104,61 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 		
+		if(vida == 6)
+		{
+			cora1.SetActive(false);
+			cora2.SetActive(false);
+			cora3.SetActive(false);
+			cora4.SetActive(true);
+			cora5.SetActive(true);
+			cora6.SetActive(true);
+		}
+		if(vida == 5)
+		{
+			cora1.SetActive(false);
+			cora2.SetActive(false);
+			cora3.SetActive(true);
+			cora4.SetActive(true);
+			cora5.SetActive(true);
+			cora6.SetActive(false);
+		}
+		if(vida == 4)
+		{
+			cora1.SetActive(false);
+			cora2.SetActive(false);
+			cora3.SetActive(false);
+			cora4.SetActive(true);
+			cora5.SetActive(true);
+			cora6.SetActive(false);
+		}
+		if(vida == 3)
+		{
+			cora1.SetActive(false);
+			cora2.SetActive(true);
+			cora3.SetActive(false);
+			cora4.SetActive(true);
+			cora5.SetActive(false);
+			cora6.SetActive(false);
+		}
+		if(vida == 2)
+		{
+			cora1.SetActive(false);
+			cora2.SetActive(false);
+			cora3.SetActive(false);
+			cora4.SetActive(true);
+			cora5.SetActive(false);
+			cora6.SetActive(false);
+		}
+		if(vida == 1)
+		{
+			cora1.SetActive(true);
+			cora2.SetActive(false);
+			cora3.SetActive(false);
+			cora4.SetActive(false);
+			cora5.SetActive(false);
+			cora6.SetActive(false);
+		}
+		
 		//Morir
 		if(vida <= 0)
 		{
@@ -115,7 +167,6 @@ public class PlayerController : MonoBehaviour {
 	
 			//gameObject.SetActive(false);
 			//Time.timeScale = 0.0f;
-			
 		}
 	}
 
@@ -140,17 +191,17 @@ public class PlayerController : MonoBehaviour {
 		
 		if(_col.gameObject.tag == "vida+")
 		{
-			if(vida < 3)
+			if(vida < 6)
 			{
-				vida++;
+				vida+=2;
 			}
 		}
 		
 		if(_col.gameObject.tag == "vida++")
 		{
-			if(vida < 3)
+			if(vida < 6)
 			{
-				vida = 3;
+				vida = 6;
 			}
 		}
 	}
