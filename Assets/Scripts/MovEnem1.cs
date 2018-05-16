@@ -10,9 +10,7 @@ public class MovEnem1 : MonoBehaviour
 	float dash = 0;
 	int pos;
 	bool cont = false;
-	public Sprite Default;
-	public Sprite movD;
-	public Sprite dashD;
+	
 	Rigidbody2D Rigi;
 	SpriteRenderer spr;
 	
@@ -34,12 +32,10 @@ public class MovEnem1 : MonoBehaviour
 		if(dash > 3)
 		{
 			velocidad = 24 * cambio;
-			spr.sprite = dashD;
 		}
 		if(dash > 3.5)
 		{
 			velocidad = 3 * cambio;
-			spr.sprite = movD;
 			dash = 0;
 		}
 		
