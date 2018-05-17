@@ -20,14 +20,12 @@ public class patron_jefe : MonoBehaviour
 	GameObject Farriba;
 	GameObject Mgranad;
 	Rigidbody2D Rigi;
+	public Animator anim;
 	
 	public GameObject Frutivictoria;
 	
-	Animator anim;
-	
 	void Start () 
 	{
-		anim = GetComponent<Animator> ();
 		Rigi = GetComponent<Rigidbody2D>();
 		Fderecha = fuegoD;
 		FIzquierda = fuegoI;
@@ -63,10 +61,12 @@ public class patron_jefe : MonoBehaviour
 		if(dash > 12) //Descanso
 		{
 			velocidad = 0;
+			anim.SetBool("descanso", true);
 		}
 		if(dash > 14) //Movimiento y ataque lento
 		{
 			velocidad = 2;
+			anim.SetBool("descanso", false);
 			
 			timerD += Time.deltaTime;
 			if(timerD > 0.8)
