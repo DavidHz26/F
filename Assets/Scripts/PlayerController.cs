@@ -104,6 +104,11 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 		
+		if(vida > 6)
+		{
+			vida = 6;
+		}
+		
 		if(vida <= 6)
 		{
 			cora1.SetActive(false);

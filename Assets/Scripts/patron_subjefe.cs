@@ -21,6 +21,7 @@ public class patron_subjefe : MonoBehaviour
 	GameObject localizador;
 	public GameObject bala;
 	GameObject balaActual;
+	public Animator anim;
 	
 	void Start () 
 	{
@@ -33,77 +34,77 @@ public class patron_subjefe : MonoBehaviour
 	{
 		if(vivo == true)
 		{
-		//Movimiento comun
-		if(contar < 3)
-		{
-			tiempo_juego = 0;
-			GetComponent<Rigidbody2D>().velocity = new Vector2(-vel_mov, 0);
-		}
-		if(contar >= 3)
-		{
-			GetComponent<Rigidbody2D>().velocity = new Vector2(0, -subebaja);
-			fase_juego = false;
-		}
-		
-		//Ataque
-		if(fase_juego == true)
-		{
-			if(ataque == true)
+			//Movimiento comun
+			if(contar < 3)
 			{
-				timer_ataque += Time.deltaTime;
-				
-				if(timer_ataque > 0.5)
+				tiempo_juego = 0;
+				GetComponent<Rigidbody2D>().velocity = new Vector2(-vel_mov, 0);
+			}
+			if(contar >= 3)
+			{
+				GetComponent<Rigidbody2D>().velocity = new Vector2(0, -subebaja);
+				fase_juego = false;
+			}
+			
+			//Ataque
+			if(fase_juego == true)
+			{
+				if(ataque == true)
 				{
-					Instantiate (bala, transform.position, Quaternion.Euler (0, 0, 180));
-					timer_ataque = 0;
+					timer_ataque += Time.deltaTime;
+					
+					if(timer_ataque > 0.5)
+					{
+						Instantiate (bala, transform.position, Quaternion.Euler (0, 0, 180));
+						timer_ataque = 0;
+					}
 				}
 			}
-		}
-		
-		//Ecolocalizacion
-		if(fase_juego == false)
-		{
-			tiempo_juego += Time.deltaTime;
 			
-			if(tiempo_juego <= 0.2f)
+			//Ecolocalizacion
+			if(fase_juego == false)
 			{
-				ataque = false;
-			}
-			if(tiempo_juego <= 6)
-			{
-				timer_eco += Time.deltaTime;
-			}
-			if(tiempo_juego > 6)
-			{
-				GetComponent<Rigidbody2D>().velocity = new Vector2(0, subebaja);
-			}
-			if(tiempo_juego >= 7.5)
-			{
-				contar = 0;
-				fase_juego = true;
+				tiempo_juego += Time.deltaTime;
+				
+				if(tiempo_juego <= 0.2f)
+				{
+					ataque = false;
+				}
+				if(tiempo_juego <= 6)
+				{
+					timer_eco += Time.deltaTime;
+				}
+				if(tiempo_juego > 6)
+				{
+					GetComponent<Rigidbody2D>().velocity = new Vector2(0, subebaja);
+				}
+				if(tiempo_juego >= 7.5)
+				{
+					contar = 0;
+					fase_juego = true;
+				}
+				
+				if(timer_eco > 1)
+				{
+					Instantiate (eco, transform.position, Quaternion.Euler (0, 0, quat));
+					timer_eco = 0;
+				}
 			}
 			
-			if(timer_eco > 1)
+			//Cambio de posicion
+			if(choque == true)
 			{
-				Instantiate (eco, transform.position, Quaternion.Euler (0, 0, quat));
-				timer_eco = 0;
+				vel_mov = 5;
+				transform.localRotation = Quaternion.Euler(0, 0, 0);
+				quat = 90;
+				
 			}
-		}
-		
-		//Cambio de posicion
-		if(choque == true)
-		{
-			vel_mov = 5;
-			transform.localRotation = Quaternion.Euler(0, 0, 0);
-			quat = 90;
-			
-		}
-		else
-		{
-			vel_mov = -5;
-			transform.localRotation = Quaternion.Euler(0, 180, 0);
-			quat = -90;
-		}
+			else
+			{
+				vel_mov = -5;
+				transform.localRotation = Quaternion.Euler(0, 180, 0);
+				quat = -90;
+			}
 		}
 		
 		if (Input.GetKeyDown("space"))
@@ -115,6 +116,7 @@ public class patron_subjefe : MonoBehaviour
 		{
 			vivo = false;
 			gameObject.GetComponent<Rigidbody2D>().gravityScale = 2;
+			anim.SetBool("muerte", true);
 			Destroy(gameObject, 3.0f);
 		}
 	}

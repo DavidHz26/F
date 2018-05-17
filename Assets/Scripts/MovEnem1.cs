@@ -10,9 +10,11 @@ public class MovEnem1 : MonoBehaviour
 	float dash = 0;
 	int pos;
 	bool cont = false;
-	
+	bool vivo = true;
 	Rigidbody2D Rigi;
 	SpriteRenderer spr;
+	
+	public Animator anim;
 	
 	void Start()
 	{
@@ -22,36 +24,46 @@ public class MovEnem1 : MonoBehaviour
 	
 	void Update ()
 	{
-		dash += Time.deltaTime;
+		if(vivo == true)
+		{
+			dash += Time.deltaTime;
+			
+			Rigi.velocity= new Vector2(velocidad, 0);
+			if(dash >2.8)
+			{
+				velocidad = 0 * cambio;
+			}
+			if(dash > 3)
+			{
+				velocidad = 24 * cambio;
+			}
+			if(dash > 3.5)
+			{
+				velocidad = 3 * cambio;
+				dash = 0;
+			}
+			
+			if(cont == false)
+			{
+				transform.localRotation = Quaternion.Euler(0, 0, 0);
+			}
+			else
+			{
+				transform.localRotation = Quaternion.Euler(0, 180, 0);
+			}
+		}
 		
-		Rigi.velocity= new Vector2(velocidad, 0);
-		if(dash >2.8)
+		if (Input.GetKeyDown("space"))
 		{
-			velocidad = 0 * cambio;
+			vida-=1;
 		}
-		if(dash > 3)
-		{
-			velocidad = 24 * cambio;
-		}
-		if(dash > 3.5)
-		{
-			velocidad = 3 * cambio;
-			dash = 0;
-		}
-		
-		if(cont == false)
-		{
-			transform.localRotation = Quaternion.Euler(0, 0, 0);
-		}
-		else
-		{
-			transform.localRotation = Quaternion.Euler(0, 180, 0);
-		}
-		
 		//Vida y muerte del vampiro
 		if(vida <= 0)
 		{
-			Destroy(gameObject);
+			vivo = false;
+			gameObject.GetComponent<Rigidbody2D>().gravityScale = 4;
+			anim.SetBool("muerte", true);
+			Destroy(gameObject, 1.0f);
 		}
 	}
 	

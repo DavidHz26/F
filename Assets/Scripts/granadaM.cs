@@ -22,7 +22,7 @@ public class granadaM : MonoBehaviour
 	
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if(col.gameObject.tag == "pader" || col.gameObject.tag == "Suelo" || col.gameObject.tag == "Player")
+		if(col.gameObject.tag == "pader" || col.gameObject.tag == "Suelo" || col.gameObject.tag == "Player" || col.gameObject.tag == "enemigote")
 		{
 			Destroy(gameObject);
 		}
