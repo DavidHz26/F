@@ -12,7 +12,7 @@ public class patron_subjefe : MonoBehaviour
 	float timer_eco = 0;
 	float timer_ataque = 0;
 	float vel_mov = 5;
-	float vida = 150;
+	float vida = 30;
 	public float subebaja = 4;
 	public float tiempo_juego = 0;
 	int quat = 90;
@@ -136,6 +136,10 @@ public class patron_subjefe : MonoBehaviour
 			vida-=1;
 		}
 		if(col.gameObject.tag == "Uvas")
+		{
+			vida-=5;
+		}
+		if(col.gameObject.tag == "Sandia")
 		{
 			vida-=3;
 		}

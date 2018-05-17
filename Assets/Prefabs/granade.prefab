@@ -100,8 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gSpeed: 250
-  sGranade: {fileID: 21300000, guid: 07eb5aca082d1244b8524504f81ce8ea, type: 3}
+  sGranade: {fileID: 21300000, guid: 1ee57ad5ddc850943b1607c16e073900, type: 3}
   sBoom: {fileID: 21300000, guid: 85e9afc56ba899b4c8ad939be075df38, type: 3}
+  launcher: {fileID: 1628888992065602, guid: 8b35d0d0444c6554582db0011f6e48fe, type: 2}
+  dir: 0
 --- !u!212 &212970242888032090
 SpriteRenderer:
   m_ObjectHideFlags: 1

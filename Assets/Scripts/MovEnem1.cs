@@ -83,7 +83,12 @@ public class MovEnem1 : MonoBehaviour
 		}
 		if(col.gameObject.tag == "Uvas")
 		{
+			vida-=5;
+		}
+		if(col.gameObject.tag == "Sandia")
+		{
 			vida-=3;
 		}
+		
 	}
 }

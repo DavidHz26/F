@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934fb9b53a2f1c5428f6d6ffbe6ca823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cWeapon: {fileID: 0}
+  cWeapon: {fileID: 1968498187908332, guid: 32aa17cd8e4b10a44b3dec02549b008f, type: 2}
   _numWeapon: 3
 --- !u!212 &212970356194314312
 SpriteRenderer:

@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658d00c8d08d704a998d48bfbc23a8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FrutaExp: {fileID: 21300000, guid: 8a696d328ea887540b81a023ff029ddc, type: 3}
 --- !u!212 &212278256305910188
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class patron_jefe : MonoBehaviour 
 {
@@ -8,7 +9,7 @@ public class patron_jefe : MonoBehaviour
 	float velocidad;
 	float dash = 0;
 	float timerD = 0;
-	float vida = 450;
+	float vida = 50;
 	bool coli = false;
 	public GameObject fuegoD;
 	public GameObject fuegoI;
@@ -19,6 +20,8 @@ public class patron_jefe : MonoBehaviour
 	GameObject Farriba;
 	GameObject Mgranad;
 	Rigidbody2D Rigi;
+	
+	public GameObject Frutivictoria;
 	
 	Animator anim;
 	
@@ -94,7 +97,11 @@ public class patron_jefe : MonoBehaviour
 		//Vida y muerte del subjefe
 		if(vida <= 0)
 		{
+			Frutivictoria.SetActive(true);
+			Invoke("CargarMenu", 0.5f);
 			Destroy(gameObject);
+			
+			
 		}
 	}
 	
@@ -110,7 +117,15 @@ public class patron_jefe : MonoBehaviour
 		}
 		if(col.gameObject.tag == "Uvas")
 		{
+			vida-=5;
+		}
+		if(col.gameObject.tag == "Sandia")
+		{
 			vida-=3;
 		}
+	}
+	
+	void CargarMenu(){
+		SceneManager.LoadScene("Menu");
 	}
 }

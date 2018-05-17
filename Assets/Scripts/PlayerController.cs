@@ -108,6 +108,10 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 		
+		if(vida > 6){
+			vida = 6;
+		}
+		
 		if(vida <= 6)
 		{
 			cora1.SetActive(false);
@@ -190,14 +194,14 @@ public class PlayerController : MonoBehaviour {
 		if(_col.gameObject.tag == "enemigote" || _col.gameObject.tag == "balin" || _col.gameObject.tag == "balon")
 		{
 			//anim.SetBool("damage", true);
-			vida = vida - 0.5f;
+			vida = vida - 1.0f;
 		}
 		
 		if(_col.gameObject.tag == "vida+")
 		{
 			if(vida < 6)
 			{
-				vida = vida + 2;
+				vida = vida + 1;
 			}
 		}
 		
