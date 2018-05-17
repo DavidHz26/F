@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
 
 		float leftxAxis = Input.GetAxis ("LeftJoystick_X");
 		
-		transform.Translate (movement * velWalk);
+		//transform.Translate (movement * velWalk);
 		
 
 		///ANIMACIONES!!!!
@@ -56,6 +56,8 @@ public class PlayerController : MonoBehaviour {
 			spr.sprite = Right;
 			spr.flipX = false;
 			
+			transform.Translate (movement * velWalk);
+			
 			//anim.SetBool("walk", true);
 		}
 
@@ -64,6 +66,8 @@ public class PlayerController : MonoBehaviour {
 			idle = false;
 			spr.sprite = Right;
 			spr.flipX = true;
+			
+			transform.Translate (movement * velWalk);
 			
 			//anim.SetBool("walk", true);
 		}
@@ -102,11 +106,6 @@ public class PlayerController : MonoBehaviour {
 				
 				//anim.SetBool("walk", false);
 			}
-		}
-		
-		if(vida > 6)
-		{
-			vida = 6;
 		}
 		
 		if(vida <= 6)

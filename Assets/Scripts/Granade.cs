@@ -11,22 +11,26 @@ public class Granade : MonoBehaviour {
 
 	public Sprite sGranade;
 	public Sprite sBoom;
+	
+	public GameObject launcher;
+	public int dir = 0;
 
 	// Use this for initialization
 	void Start () {
 		rigi = GetComponent<Rigidbody2D> ();
 		spr = GetComponent<SpriteRenderer> ();
-
 		
-		rigi.AddForce(new Vector2(1.0f, 1.0f) * gSpeed);
-	}
-
-	// Update is called once per frame
-	void Update () {
+		launcher.GetComponent<GranadeController> ().right = dir;
 		
-
+		if(dir == 0){
+			rigi.AddForce(new Vector2(1.0f, 1.0f) * gSpeed);
+		}
+		
+		if(dir == 1){
+			rigi.AddForce(new Vector2(-1.0f, 1.0f) * gSpeed);
+		}
 	}
-
+	
 	void OnCollisionEnter2D(Collision2D _col) {
 		if (_col.gameObject.CompareTag ("Suelo")) {
 			spr.sprite = sBoom;
