@@ -8,6 +8,11 @@ public class AnimController : MonoBehaviour {
 	public bool idle;
 	
 	Animator anim;
+	
+	public bool view = true;
+	public bool seguro = false;
+	
+	float temp = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -17,18 +22,33 @@ public class AnimController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+		
+		
+		
 		idle=true;
 		
 		float xAxis = Input.GetAxis ("Horizontal");
 		
 		Vector3 movement = transform.TransformDirection (xAxis, 0, 0);
 		
+		
+		
+		if(view == true){
+			transform.localScale = new Vector3(3.571913f, 3.571913f, 3.571913f);
+			
+		}
+		
+		else if(view == false){
+			transform.localScale = new Vector3(-3.571913f, 3.571913f, 3.571913f);
+		}
+		
 		float leftxAxis = Input.GetAxis ("LeftJoystick_X");
 		
 			//Movimiento Derecha
 		if (xAxis >= 1) {
 			idle = false;
-			//transform.localScale = new Vector3(transform.localScale.x * 1, transform.localScale.y, transform.localScale.z);
+			view = true;
+			seguro = false;
 			anim.SetBool("walk", true);
 			
 		}
@@ -36,7 +56,8 @@ public class AnimController : MonoBehaviour {
 		//Movimiento Izquierda
 		else if (xAxis <= -1) {
 			idle=false;
-			//transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+			view = false;
+			seguro = true;
 			anim.SetBool("walk", true);
 		}
 		
@@ -76,15 +97,16 @@ public class AnimController : MonoBehaviour {
 			anim.SetBool("jump", false);
 		}
 		
-		if(_col.gameObject.CompareTag("enemigote")){
-			
-			anim.SetBool("damage", true);
-		}
 		
 		//Controlador de vida
-		if(_col.gameObject.tag == "enemigote" || _col.gameObject.tag == "balin" || _col.gameObject.tag == "balon")
+		if(_col.gameObject.CompareTag("enemigote") || _col.gameObject.CompareTag("balin") || _col.gameObject.CompareTag("balon"))
 		{
+			print("Me hicieron daño!");
+			//temp += Time.deltaTime;
 			anim.SetBool("damage", true);
+			/*if(temp <= 2.0f){
+				anim.SetBool("damage", false);
+			}*/
 		}
 
 	}

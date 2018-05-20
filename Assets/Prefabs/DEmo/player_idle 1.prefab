@@ -1420,6 +1420,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ground: 0
   idle: 0
+  view: 1
+  seguro: 0
 --- !u!114 &114762030238333020
 MonoBehaviour:
   m_ObjectHideFlags: 1

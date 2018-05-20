@@ -1078,6 +1078,7 @@ MonoBehaviour:
   Ammo: 5
   nGranade: {fileID: 21300000, guid: 07eb5aca082d1244b8524504f81ce8ea, type: 3}
   pressL2: 0
+  right: 0
 --- !u!114 &114321063927436456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1112,6 +1113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ground: 0
   idle: 0
+  view: 1
+  seguro: 0
 --- !u!114 &114348836761829324
 MonoBehaviour:
   m_ObjectHideFlags: 1
