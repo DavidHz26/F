@@ -261,8 +261,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Jimena Gonz\xE1lez Marroquin\nFrancisco Ferreiro Valenzuela\nJose Luis
-    H. Gomez\n"
+  m_Text: "Jimena Gonz\xE1lez Marroquin\nLuis Enrique Ram\xEDrez Puente\nJose Luis
+    H. Gomez\nGerardo Corona Nazar\xE1\nFrancisco Ferreiro Valenzuela\n\n\n"
 --- !u!222 &454425951
 CanvasRenderer:
   m_ObjectHideFlags: 0
